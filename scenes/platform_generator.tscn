@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://rdntscox710u"]
+
+[ext_resource type="Script" path="res://scripts/PlatformGenerator.cs" id="1_hgly5"]
+[ext_resource type="PackedScene" uid="uid://lkm4rmo7yce8" path="res://scenes/platforms/platform.tscn" id="2_gg7yn"]
+
+[node name="PlatformGenerator" type="Marker2D"]
+script = ExtResource("1_hgly5")
+_platformScenes = [ExtResource("2_gg7yn")]
+_platformCountLowerBound = 30
+_platformCountUpperBound = 50

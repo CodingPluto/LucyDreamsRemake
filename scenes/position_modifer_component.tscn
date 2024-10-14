@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://vunrcxdttihg"]
+
+[ext_resource type="PackedScene" uid="uid://dgtva1whry2tm" path="res://scenes/component.tscn" id="1_p8g2l"]
+[ext_resource type="Script" path="res://scripts/PositionModiferComponent.cs" id="2_t2ph3"]
+
+[node name="PositionModiferComponent" instance=ExtResource("1_p8g2l")]
+script = ExtResource("2_t2ph3")

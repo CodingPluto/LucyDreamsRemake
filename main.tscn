@@ -1,6 +1,15 @@
-[gd_scene load_steps=2 format=3 uid="uid://dtr3urg65l8oo"]
+[gd_scene load_steps=4 format=3 uid="uid://ynmem3x4mq4k"]
 
 [ext_resource type="Script" path="res://main.cs" id="1_mr1b2"]
+[ext_resource type="PackedScene" uid="uid://rdntscox710u" path="res://scenes/platform_generator.tscn" id="2_hr6un"]
+[ext_resource type="PackedScene" uid="uid://bupj7op8ubd3c" path="res://scenes/lucy.tscn" id="3_5umq6"]
 
 [node name="main" type="Node2D"]
 script = ExtResource("1_mr1b2")
+
+[node name="PlatformGenerator" parent="." instance=ExtResource("2_hr6un")]
+_platformCountUpperBound = 500
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Lucy" parent="." instance=ExtResource("3_5umq6")]

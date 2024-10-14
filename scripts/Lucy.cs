@@ -197,7 +197,7 @@ public partial class Lucy : CharacterBody2D
     {
         _isJumping = false;
         _coyoteTime = false;
-        _coyoteFrameCount = 0;/*
+        _coyoteFrameCount = 0;
         float widthAdjustment = Hitbox.Shape.GetRect().Size.X * Scale.X / 2;
         float platformWidthAdjustment = _currentPlatform.SpriteWidth / 2;
         _bufferVelocity.Y = 0;
@@ -211,7 +211,7 @@ public partial class Lucy : CharacterBody2D
             _physicsState = PhysicsState.GENERAL_INTERACTION;
             _coyoteTime = true;
             _currentPlatform.InteractingWithPlayer = false;
-        }*/
+        }
 
     }
     private void GeneralPlatformInteraction(ref double delta)

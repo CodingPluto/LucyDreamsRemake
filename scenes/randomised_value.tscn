@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://bo0lo81nn5gnc"]
+
+[ext_resource type="PackedScene" uid="uid://dlwjpjmo60hxw" path="res://scenes/complex_value.tscn" id="1_drrmo"]
+[ext_resource type="Script" path="res://scripts/RandomisedValue.cs" id="2_0248y"]
+
+[node name="RandomisedValue" instance=ExtResource("1_drrmo")]
+script = ExtResource("2_0248y")
+Randomised = false
+RandomUpperBound = 10.0
+RandomLowerBound = 0.0
+RandomiseNegativePositive = false
+_Value = 5.0

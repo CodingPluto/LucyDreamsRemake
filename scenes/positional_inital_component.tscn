@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://bayv6q63ql0th"]
+
+[ext_resource type="PackedScene" uid="uid://dgtva1whry2tm" path="res://scenes/component.tscn" id="1_lqonh"]
+[ext_resource type="Script" path="res://scripts/PositionInitalComponent.cs" id="2_ptruj"]
+
+[node name="PositionInitalComponent" instance=ExtResource("1_lqonh")]
+script = ExtResource("2_ptruj")

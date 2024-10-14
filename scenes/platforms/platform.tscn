@@ -1,0 +1,51 @@
+[gd_scene load_steps=6 format=3 uid="uid://lkm4rmo7yce8"]
+
+[ext_resource type="Texture2D" uid="uid://d2bmix4r5s6v4" path="res://assets/platforms/clouds/cloud_1/cloud_version_2.png" id="1_cgvo1"]
+[ext_resource type="PackedScene" uid="uid://bayv6q63ql0th" path="res://scenes/positional_inital_component.tscn" id="1_dedlk"]
+[ext_resource type="PackedScene" uid="uid://vunrcxdttihg" path="res://scenes/position_modifer_component.tscn" id="4_1dox3"]
+[ext_resource type="PackedScene" uid="uid://bo0lo81nn5gnc" path="res://scenes/randomised_value.tscn" id="4_78xpl"]
+[ext_resource type="PackedScene" uid="uid://8kba02vkbio6" path="res://scenes/wave_value.tscn" id="5_qewxy"]
+
+[node name="Platform" type="StaticBody2D"]
+scale = Vector2(2, 2)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_cgvo1")
+
+[node name="PositionInitalComponent" parent="." node_paths=PackedStringArray("VerticalStartingPosition", "HoriziontalStartingPosition") instance=ExtResource("1_dedlk")]
+VerticalStartingPosition = NodePath("Y")
+HoriziontalStartingPosition = NodePath("X")
+
+[node name="X" parent="PositionInitalComponent" instance=ExtResource("4_78xpl")]
+Randomised = true
+RandomUpperBound = 640.0
+RandomiseNegativePositive = true
+
+[node name="Y" parent="PositionInitalComponent" instance=ExtResource("4_78xpl")]
+Randomised = true
+RandomUpperBound = 360.0
+RandomiseNegativePositive = true
+
+[node name="PositionModiferComponent" parent="." node_paths=PackedStringArray("VerticalPositionModifer", "HoriziontalPositionModifer") instance=ExtResource("4_1dox3")]
+VerticalPositionModifer = NodePath("Y")
+HoriziontalPositionModifer = NodePath("X")
+
+[node name="Amplitiude" parent="PositionModiferComponent" instance=ExtResource("4_78xpl")]
+Randomised = true
+RandomUpperBound = 0.1
+RandomLowerBound = 1.0
+
+[node name="Speed" parent="PositionModiferComponent" instance=ExtResource("4_78xpl")]
+Randomised = true
+RandomUpperBound = 5.0
+RandomLowerBound = 1.0
+RandomiseNegativePositive = true
+
+[node name="X" parent="PositionModiferComponent" node_paths=PackedStringArray("Amplitiude", "Speed") instance=ExtResource("5_qewxy")]
+Amplitiude = NodePath("../Amplitiude")
+Speed = NodePath("../Speed")
+
+[node name="Y" parent="PositionModiferComponent" node_paths=PackedStringArray("Amplitiude", "Speed") instance=ExtResource("5_qewxy")]
+Amplitiude = NodePath("../Amplitiude")
+Speed = NodePath("../Speed")
+Type = 1

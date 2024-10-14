@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dlwjpjmo60hxw"]
+
+[ext_resource type="Script" path="res://scripts/ComplexValue.cs" id="1_gmnqi"]
+
+[node name="ComplexValue" type="Node"]
+script = ExtResource("1_gmnqi")

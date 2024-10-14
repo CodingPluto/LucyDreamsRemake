@@ -14,6 +14,10 @@ config/name="LucyDreamsRemake"
 run/main_scene="res://main.tscn"
 config/features=PackedStringArray("4.2", "C#", "Forward Plus")
 
+[autoload]
+
+Globals="*res://scripts/Globals.cs"
+
 [dotnet]
 
 project/assembly_name="LucyDreamsRemake"
